@@ -15,7 +15,7 @@ $(document).ready(function(){
         wavesurfer.load('http://radio-parasite.tetaneutral.net:8000/terre_blanque_mp3');
 
 */
-    var WIDTH = 300;
+    var WIDTH = 600;
     var HEIGHT = 300;
     var audioElement = document.getElementById("player");
     var context = new (window.AudioContext || window.webkitAudioContext)();
@@ -35,10 +35,10 @@ $(document).ready(function(){
                             drawVisual = requestAnimationFrame(draw);
                             analyser.getByteTimeDomainData(dataArray);
                             //console.log(dataArray)
-                            canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+                            canvasCtx.fillStyle = 'rgb(0, 0, 0)';
                             canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
                             canvasCtx.lineWidth = 2;
-                            canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+                            canvasCtx.strokeStyle = 'rgb(255,255,255)';
                             canvasCtx.beginPath();
                             var sliceWidth = WIDTH * 1.0 / bufferLength;
                             var x = 0;
