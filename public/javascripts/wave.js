@@ -15,6 +15,13 @@ $(document).ready(function(){
         wavesurfer.load('http://radio-parasite.tetaneutral.net:8000/terre_blanque_mp3');
 
 */
+    var socket = io("http://radio-parasite.tetaneutral.net:3000");
+    socket.on("IceMeta",function(msg){
+        console.log("IceMeta: " + msg) 
+        var md=document.getElementById("track_title")
+        md.innerHTML="   Playing: "+msg
+});
+
     var WIDTH = 600;
     var HEIGHT = 300;
     var audioElement = document.getElementById("player");

@@ -11,5 +11,12 @@ block content
   div.container
     audio(id="player",  src='http://radio-parasite.tetaneutral.net:8000/terre_blanque_mp3', autoplay, crossorigin="anonymous")      
             
-    canvas(id='wave', width="600" height="300")        
+    canvas(id='wave', width="600" height="300", style="z-index:1")
+    div(id="controls", style="z-index:2; position:absolute; top:x; left:y;", width=600)     
+      button(id="btn_play", class="btn btn-default btn-sm") 
+        span(class="glyphicon glyphicon-play", aria-hidden="true") Play
+      button(id="btn_stop", class="btn btn-default btn-sm") 
+        span(class="glyphicon glyphicon-stop", aria-hidden="true") Stop
+      span(class="inline" id="track_title" ) 
+
     //#wave
