@@ -1,0 +1,16 @@
+.panel.panel-default(id='userStatus_'+user.key)
+    .panel-heading Buddy
+    ul.list-group 
+        li.list-group-item 
+           p
+             span.label.label-default username
+             span.pull-right= user.name
+        li.list-group-item
+           p
+             span.label.label-default status
+             span.pull-right= user.con_status
+        li.list-group-item
+           p
+             span.label.label-default key
+             span.pull-right= user.key
+

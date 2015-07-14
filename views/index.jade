@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  //#bla
+  //        p yo
+  //#bli
+  //button(id="triggr1" )
+  //      click me
+  div.container
+    audio(id="player",  src='http://radio-parasite.tetaneutral.net:8000/terre_blanque_mp3', autoplay, crossorigin="anonymous")      
+            
+    canvas(id='wave', width="300" height="300")        
+    //#wave
